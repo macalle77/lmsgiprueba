@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#menu ul li{
+    display:inline;
+}
+
+/*
+//Comenzamos pensando que la página web va a ser visionada en un móvil, configuración por defecto, inicial.
+//Mobile first
+*/
+#wrapper {
+    width:95%;  
+    margin: 0 auto; 
+    /*background-color: aquamarine;*/
+    border: 2px solid black;
+}
+
+#banner {
+    width:100%; 
+    background-color:bisque;
+}
+
+#menu {
+    width: 100%;
+    background-color:coral;
+}
+
+#main {
+    display: flex; flex-direction: column;
+    background-color:white;
+}
+
+
+#contact {
+    width:100%; 
+    background-color:deepskyblue;
+}
+
+/*Configuraciones según el dispositivo donde se visualiza la web*/
+
+/* Pequeños dispositivos (móviles formato apasiado como minimo 576px)*/
+
+@media only screen and (min-width: 576px) {
+    
+    body{
+        font-size: 22px;
+    }
+
+    h1, h2, h3, p {
+        font-size: 22px;
+    }
+    #main {background-color:blueviolet;}
+}
+
+/*Dispositivos de tamaño medio (tablets, como minimo 768px)*/
+
+@media only screen and (min-width: 768px) {
+
+    body{
+        font-size: 24px;
+    }
+    
+    h1, h2, h3, p {
+        font-size: 24px;
+    }
+
+    #wrapper {
+        width:90%;  margin: 0 auto; 
+    }
+
+    #banner {width:100%;}
+
+    #menu {width:100%;}
+
+    #main {display: flex; flex-direction: row; background-color:red;}
+
+    #new {flex: 70%;}
+
+    #sidebar {flex: 30%;}
+
+    #contact {width:100%;}
+
+}
+
+/*Dispositivos de tamaño grade como pantallas (desktops como mínimo 992px)*/
+
+@media only screen and (min-width: 992px) { 
+    
+    h1, h2, h3, p, li{
+        font-size: 24px;
+    }
+
+    #wrapper {width:80%;  margin: 0 auto;}
+
+    #banner {width:100%;}
+
+    #menu {width:100%;}
+    
+    #main {display: flex; flex-direction: row; background-color:blue;}
+
+    #new {flex: 80%;}
+
+    #sidebar {flex: 20%;}
+
+    #contact {width:100%;}
+}
+
+/*Grandes pantallas (large desktops hasta 1200px)*/
+
+@media only screen and (min-width: 1200px) {
+
+    body{
+        font-size: 34px;
+    }
+    
+    h1, h2, h3, p {
+        font-size: 34px;
+    }
+    
+    #wrapper {width:70%;  margin: 0 auto; }
+
+    #banner {width:100%;}
+
+    #menu {width:100%;}
+
+    #main {display: flex; flex-direction: row; background-color:yellow;}
+
+    #new {flex: 80%;}
+
+    #sidebar {flex: 20%;}
+
+    #contact {width:100%; clear:both; }
+
+}
+
